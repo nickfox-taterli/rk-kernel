@@ -605,37 +605,6 @@
 
 &i2c1 {
 	status = "okay";
-
-	sensor@f {
-		status = "okay";
-		compatible = "ak8963";
-		reg = <0x0f>;
-		type = <SENSOR_TYPE_COMPASS>;
-		irq_enable = <0>;
-		poll_delay_ms = <30>;
-		layout = <1>;
-		reprobe_en = <1>;
-	};
-
-	gt1x: gt1x@14 {
-		compatible = "goodix,gt1x";
-		reg = <0x14>;
-		power-supply = <&vcc3v3_lcd>;
-		goodix,rst-gpio = <&gpio0 RK_PB4 GPIO_ACTIVE_HIGH>;
-		goodix,irq-gpio = <&gpio0 RK_PA5 IRQ_TYPE_LEVEL_LOW>;
-	};
-
-	sensor@4c {
-		status = "okay";
-		compatible = "gs_mma7660";
-		reg = <0x4c>;
-		type = <SENSOR_TYPE_ACCEL>;
-		irq-gpio = <&gpio0 RK_PB7 IRQ_TYPE_LEVEL_LOW>;
-		irq_enable = <0>;
-		poll_delay_ms = <30>;
-		layout = <2>;
-		reprobe_en = <1>;
-	};
 };
 
 &i2c2 {
@@ -745,17 +714,7 @@
 };
 
 &rkisp1 {
-	status = "okay";
-
-	port {
-		#address-cells = <1>;
-		#size-cells = <0>;
-
-		isp0_mipi_in: endpoint@0 {
-			reg = <0>;
-			remote-endpoint = <&dphy_rx0_out>;
-		};
-	};
+	status = "disabled";
 };
 
 &rockchip_suspend {
