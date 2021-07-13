@@ -1039,8 +1039,8 @@
 		resets = <&cru SRST_OTP_PHY>;
 		reset-names = "otp_phy";
 
-		/* Data cells */
-		otp_id: id@7 {
+		/* Data cells */ 
+		id: id@7 {
 			reg = <0x07 0x10>;
 		};
 		cpu_leakage: cpu-leakage@17 {
@@ -1050,6 +1050,7 @@
 			reg = <0x1e 0x1>;
 			bits = <4 3>;
 		};
+		
 	};
 
 	cru: clock-controller@ff2b0000 {
