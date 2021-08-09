@@ -1040,7 +1040,7 @@
 		reset-names = "otp_phy";
 
 		/* Data cells */ 
-		id: id@7 {
+		otp_id: id@7 {
 			reg = <0x07 0x10>;
 		};
 		cpu_leakage: cpu-leakage@17 {
