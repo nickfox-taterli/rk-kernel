@@ -134,10 +134,6 @@
 	status = "okay";
 };
 
-&ov5695 {
-	status = "disabled";
-};
-
 &rk_isp {
 	status = "okay";
 };
